@@ -1,0 +1,145 @@
+{
+   "agent": "Dart",
+   "behavior": "FAILED",
+   "behaviorClose": "FAILED",
+   "case": 154,
+   "closedByMe": true,
+   "createStats": true,
+   "createWirelog": true,
+   "description": "Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>Payload: 0xeda080",
+   "droppedByMe": true,
+   "duration": 1,
+   "expectation": "The connection is failed immediately, since the payload is not valid UTF-8.",
+   "expected": {
+      "OK": []
+   },
+   "expectedClose": {
+      "closeCode": [
+         1007
+      ],
+      "closedByMe": false,
+      "closedByWrongEndpointIsFatal": true,
+      "requireClean": false
+   },
+   "failedByMe": true,
+   "httpRequest": "GET /runCase?case=154&agent=Dart HTTP/1.1\r\nuser-agent: Dart/1.14 (dart:io)\r\nconnection: Upgrade\r\ncache-control: no-cache\r\naccept-encoding: gzip\r\ncontent-length: 0\r\nsec-websocket-version: 13\r\nhost: localhost:9001\r\nsec-websocket-extensions: permessage-deflate; client_max_window_bits\r\nsec-websocket-key: nqO/VoktDCAopjqQCz96Xw==\r\nupgrade: websocket\r\n\r\n",
+   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nServer: AutobahnTestSuite/0.7.4-0.10.9\r\nX-Powered-By: AutobahnPython/0.10.9\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nSec-WebSocket-Accept: sJyNvr/xZU12LT8XTVEnJJNnfmA=\r\n\r\n",
+   "id": "6.20.1",
+   "isServer": true,
+   "localCloseCode": 1007,
+   "localCloseReason": "encountered invalid UTF-8 while processing text message at payload octet index 1",
+   "received": [],
+   "remoteCloseCode": null,
+   "remoteCloseReason": null,
+   "reportCompressionRatio": false,
+   "reportTime": false,
+   "result": "Actual events match at least one expected.",
+   "resultClose": "The connection was failed by the wrong endpoint",
+   "rxFrameStats": {
+      "1": 1
+   },
+   "rxOctetStats": {
+      "9": 1,
+      "350": 1
+   },
+   "started": "2016-01-14T16:39:10.348Z",
+   "trafficStats": null,
+   "txFrameStats": {
+      "1": 1,
+      "8": 1
+   },
+   "txOctetStats": {
+      "5": 1,
+      "84": 1,
+      "206": 1
+   },
+   "wasClean": false,
+   "wasCloseHandshakeTimeout": false,
+   "wasNotCleanReason": null,
+   "wasOpenHandshakeTimeout": false,
+   "wasServerConnectionDropTimeout": false,
+   "wirelog": [
+      [
+         "RO",
+         [
+            350,
+            "474554202f72756e436173653f636173653d313534266167656e743d4461727420485454502f312e310d0a757365722d6167656e743a20446172742f312e3134 ..."
+         ]
+      ],
+      [
+         "TO",
+         [
+            206,
+            "485454502f312e312031303120537769746368696e672050726f746f636f6c730d0a5365727665723a204175746f6261686e5465737453756974652f302e372e ..."
+         ],
+         false
+      ],
+      [
+         "TF",
+         [
+            3,
+            "\ud800"
+         ],
+         1,
+         true,
+         0,
+         null,
+         null,
+         null,
+         false
+      ],
+      [
+         "TO",
+         [
+            5,
+            "8103eda080"
+         ],
+         false
+      ],
+      [
+         "KL",
+         0.5
+      ],
+      [
+         "RO",
+         [
+            9,
+            "81834ac5da80a7655a"
+         ]
+      ],
+      [
+         "TF",
+         [
+            82,
+            "0x03ef656e636f756e746572656420696e76616c6964205554462d38207768696c652070726f63657373696e672074657874206d65737361676520617420706179 ..."
+         ],
+         8,
+         true,
+         0,
+         null,
+         null,
+         null,
+         false
+      ],
+      [
+         "TO",
+         [
+            84,
+            "885203ef656e636f756e746572656420696e76616c6964205554462d38207768696c652070726f63657373696e672074657874206d6573736167652061742070 ..."
+         ],
+         false
+      ],
+      [
+         "RF",
+         [
+            0,
+            ""
+         ],
+         1,
+         true,
+         0,
+         true,
+         "4ac5da80"
+      ]
+   ]
+}

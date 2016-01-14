@@ -1,0 +1,241 @@
+{
+   "agent": "AutobahnPython",
+   "behavior": "OK",
+   "behaviorClose": "OK",
+   "case": 343,
+   "closedByMe": true,
+   "createStats": true,
+   "createWirelog": true,
+   "description": "Send 1000 compressed messages each of payload size 64, auto-fragment to 0 octets. Use default permessage-deflate offer.",
+   "droppedByMe": false,
+   "duration": 227,
+   "expectation": "Receive echo'ed messages (with payload as sent). Timeout case after 60 secs.",
+   "expected": {},
+   "expectedClose": {
+      "closeCode": [
+         1000
+      ],
+      "closedByMe": true,
+      "requireClean": true
+   },
+   "failedByMe": false,
+   "httpRequest": "GET / HTTP/1.1\r\nUser-Agent: AutobahnTestSuite/0.7.4-0.10.9\r\nHost: 127.0.0.1:9001\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nPragma: no-cache\r\nCache-Control: no-cache\r\nSec-WebSocket-Key: PcJg7rnkeYF9ML0VnERNKQ==\r\nSec-WebSocket-Extensions: permessage-deflate; client_no_context_takeover; client_max_window_bits\r\nSec-WebSocket-Version: 13\r\n\r\n",
+   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nconnection: Upgrade\r\ncontent-length: 0\r\nsec-websocket-extensions: permessage-deflate; client_max_window_bits=15\r\nx-frame-options: SAMEORIGIN\r\ncontent-type: text/plain; charset=utf-8\r\nx-xss-protection: 1; mode=block\r\nx-content-type-options: nosniff\r\nupgrade: websocket\r\nsec-websocket-accept: qX1poGlzq3a7wtZPU5LY9bZVCtg=\r\n\r\n",
+   "id": "12.3.2",
+   "isServer": false,
+   "localCloseCode": 1000,
+   "localCloseReason": null,
+   "received": [],
+   "remoteCloseCode": 1000,
+   "remoteCloseReason": null,
+   "reportCompressionRatio": true,
+   "reportTime": true,
+   "result": "Ok, received all echo'ed messages in time.",
+   "resultClose": "Connection was properly closed",
+   "rxFrameStats": {
+      "2": 1000,
+      "8": 1
+   },
+   "rxOctetStats": {
+      "4": 1,
+      "14": 2,
+      "15": 1,
+      "16": 1,
+      "17": 1,
+      "18": 1,
+      "19": 1,
+      "20": 1,
+      "21": 1,
+      "22": 2,
+      "24": 2,
+      "25": 6,
+      "26": 1,
+      "27": 8,
+      "28": 14,
+      "29": 18,
+      "30": 27,
+      "31": 23,
+      "32": 49,
+      "33": 69,
+      "34": 75,
+      "35": 84,
+      "36": 90,
+      "37": 94,
+      "38": 83,
+      "39": 79,
+      "40": 59,
+      "41": 48,
+      "42": 42,
+      "43": 35,
+      "44": 20,
+      "45": 11,
+      "46": 11,
+      "47": 13,
+      "48": 7,
+      "49": 3,
+      "50": 1,
+      "51": 4,
+      "52": 2,
+      "53": 1,
+      "54": 1,
+      "55": 1,
+      "57": 2,
+      "58": 1,
+      "59": 1,
+      "60": 1,
+      "62": 1,
+      "64": 1,
+      "67": 1,
+      "357": 1
+   },
+   "started": "2016-01-14T16:23:03.953Z",
+   "trafficStats": {
+      "incomingCompressionRatio": 0.545921875,
+      "incomingOctetsAppLevel": 64000,
+      "incomingOctetsWebSocketLevel": 34939,
+      "incomingOctetsWireLevel": 36939,
+      "incomingWebSocketFrames": 1000,
+      "incomingWebSocketMessages": 1000,
+      "incomingWebSocketOverhead": 0.05724262285697931,
+      "outgoingCompressionRatio": 0.545921875,
+      "outgoingOctetsAppLevel": 64000,
+      "outgoingOctetsWebSocketLevel": 34939,
+      "outgoingOctetsWireLevel": 40939,
+      "outgoingWebSocketFrames": 1000,
+      "outgoingWebSocketMessages": 1000,
+      "outgoingWebSocketOverhead": 0.1717278685709379,
+      "preopenIncomingOctetsWireLevel": 357,
+      "preopenOutgoingOctetsWireLevel": 338
+   },
+   "txFrameStats": {
+      "2": 1000,
+      "8": 1
+   },
+   "txOctetStats": {
+      "8": 1,
+      "18": 2,
+      "19": 1,
+      "20": 1,
+      "21": 1,
+      "22": 1,
+      "23": 1,
+      "24": 1,
+      "25": 1,
+      "26": 2,
+      "28": 2,
+      "29": 6,
+      "30": 1,
+      "31": 8,
+      "32": 14,
+      "33": 18,
+      "34": 27,
+      "35": 23,
+      "36": 49,
+      "37": 69,
+      "38": 75,
+      "39": 84,
+      "40": 90,
+      "41": 94,
+      "42": 83,
+      "43": 79,
+      "44": 59,
+      "45": 48,
+      "46": 42,
+      "47": 35,
+      "48": 20,
+      "49": 11,
+      "50": 11,
+      "51": 13,
+      "52": 7,
+      "53": 3,
+      "54": 1,
+      "55": 4,
+      "56": 2,
+      "57": 1,
+      "58": 1,
+      "59": 1,
+      "61": 2,
+      "62": 1,
+      "63": 1,
+      "64": 1,
+      "66": 1,
+      "68": 1,
+      "71": 1,
+      "338": 1
+   },
+   "wasClean": true,
+   "wasCloseHandshakeTimeout": false,
+   "wasNotCleanReason": null,
+   "wasOpenHandshakeTimeout": false,
+   "wasServerConnectionDropTimeout": false,
+   "wirelog": [
+      [
+         "TO",
+         [
+            338,
+            "474554202f20485454502f312e310d0a557365722d4167656e743a204175746f6261686e5465737453756974652f302e372e342d302e31302e390d0a486f7374 ..."
+         ],
+         false
+      ],
+      [
+         "RO",
+         [
+            357,
+            "485454502f312e312031303120537769746368696e672050726f746f636f6c730d0a636f6e6e656374696f6e3a20557067726164650d0a636f6e74656e742d6c ..."
+         ]
+      ],
+      [
+         "WLM",
+         false
+      ],
+      [
+         "TI",
+         60
+      ],
+      [
+         "WLM",
+         true
+      ],
+      [
+         "TF",
+         [
+            2,
+            "0x03e8"
+         ],
+         8,
+         true,
+         0,
+         "6449ac0c",
+         null,
+         null,
+         false
+      ],
+      [
+         "TO",
+         [
+            8,
+            "88826449ac0c67a1"
+         ],
+         false
+      ],
+      [
+         "RO",
+         [
+            4,
+            "880203e8"
+         ]
+      ],
+      [
+         "RF",
+         [
+            2,
+            "0x03e8"
+         ],
+         8,
+         true,
+         0,
+         false,
+         null
+      ]
+   ]
+}

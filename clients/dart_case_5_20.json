@@ -1,0 +1,379 @@
+{
+   "agent": "Dart",
+   "behavior": "FAILED",
+   "behaviorClose": "OK",
+   "case": 64,
+   "closedByMe": true,
+   "createStats": true,
+   "createWirelog": true,
+   "description": "Same as Case 5.19, but send all frames with SYNC = True.\n   Note, this does not change the octets sent in any way, only how the stream\n   is chopped up on the wire.",
+   "droppedByMe": true,
+   "duration": 2004,
+   "expectation": "Same as Case 5.19. Implementations must be agnostic to how\n   octet stream is chopped up on wire (must be TCP clean).",
+   "expected": {
+      "OK": [
+         [
+            "pong",
+            "pongme 1!"
+         ],
+         [
+            "pong",
+            "pongme 2!"
+         ],
+         [
+            "message",
+            "fragment1fragment2fragment3fragment4fragment5",
+            false
+         ]
+      ]
+   },
+   "expectedClose": {
+      "closeCode": [
+         1000
+      ],
+      "closedByMe": true,
+      "requireClean": true
+   },
+   "failedByMe": false,
+   "httpRequest": "GET /runCase?case=64&agent=Dart HTTP/1.1\r\nuser-agent: Dart/1.14 (dart:io)\r\nconnection: Upgrade\r\ncache-control: no-cache\r\naccept-encoding: gzip\r\ncontent-length: 0\r\nsec-websocket-version: 13\r\nhost: localhost:9001\r\nsec-websocket-extensions: permessage-deflate; client_max_window_bits\r\nsec-websocket-key: orh4yOkvCAbhvPx73MD5qQ==\r\nupgrade: websocket\r\n\r\n",
+   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nServer: AutobahnTestSuite/0.7.4-0.10.9\r\nX-Powered-By: AutobahnPython/0.10.9\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nSec-WebSocket-Accept: iDQ4EzkOk597OcfgyJ6T0vFmNYw=\r\n\r\n",
+   "id": "5.20",
+   "isServer": true,
+   "localCloseCode": null,
+   "localCloseReason": null,
+   "received": [
+      [
+         "pong",
+         "fragment1fragment2pongme 1!"
+      ],
+      [
+         "pong",
+         "fragment3fragment4pongme 2!"
+      ],
+      [
+         "message",
+         "fragment5",
+         false
+      ]
+   ],
+   "remoteCloseCode": null,
+   "remoteCloseReason": null,
+   "reportCompressionRatio": false,
+   "reportTime": false,
+   "result": "Actual events differ from any expected.",
+   "resultClose": "Connection was properly closed",
+   "rxFrameStats": {
+      "1": 1,
+      "8": 1,
+      "10": 2
+   },
+   "rxOctetStats": {
+      "6": 1,
+      "15": 1,
+      "33": 2,
+      "349": 1
+   },
+   "started": "2016-01-14T16:39:00.079Z",
+   "trafficStats": null,
+   "txFrameStats": {
+      "0": 4,
+      "1": 1,
+      "8": 1,
+      "9": 2
+   },
+   "txOctetStats": {
+      "2": 1,
+      "11": 7,
+      "206": 1
+   },
+   "wasClean": true,
+   "wasCloseHandshakeTimeout": false,
+   "wasNotCleanReason": null,
+   "wasOpenHandshakeTimeout": false,
+   "wasServerConnectionDropTimeout": false,
+   "wirelog": [
+      [
+         "RO",
+         [
+            349,
+            "474554202f72756e436173653f636173653d3634266167656e743d4461727420485454502f312e310d0a757365722d6167656e743a20446172742f312e313420 ..."
+         ]
+      ],
+      [
+         "TO",
+         [
+            206,
+            "485454502f312e312031303120537769746368696e672050726f746f636f6c730d0a5365727665723a204175746f6261686e5465737453756974652f302e372e ..."
+         ],
+         false
+      ],
+      [
+         "TF",
+         [
+            9,
+            "fragment1"
+         ],
+         1,
+         false,
+         0,
+         null,
+         null,
+         null,
+         true
+      ],
+      [
+         "TO",
+         [
+            11,
+            "0109667261676d656e7431"
+         ],
+         true
+      ],
+      [
+         "TF",
+         [
+            9,
+            "fragment2"
+         ],
+         0,
+         false,
+         0,
+         null,
+         null,
+         null,
+         true
+      ],
+      [
+         "TF",
+         [
+            9,
+            "pongme 1!"
+         ],
+         9,
+         true,
+         0,
+         null,
+         null,
+         null,
+         true
+      ],
+      [
+         "CT",
+         1,
+         null
+      ],
+      [
+         "TO",
+         [
+            11,
+            "0009667261676d656e7432"
+         ],
+         true
+      ],
+      [
+         "TO",
+         [
+            11,
+            "8909706f6e676d65203121"
+         ],
+         true
+      ],
+      [
+         "RO",
+         [
+            33,
+            "8a9b62c583f104b7e2960fa0ed8553a3f19005a8e69f16f7f39e0ca2ee9442f4a2"
+         ]
+      ],
+      [
+         "RF",
+         [
+            27,
+            "fragment1fragment2pongme 1!"
+         ],
+         10,
+         true,
+         0,
+         true,
+         "62c583f1"
+      ],
+      [
+         "CTE",
+         null
+      ],
+      [
+         "TF",
+         [
+            9,
+            "fragment3"
+         ],
+         0,
+         false,
+         0,
+         null,
+         null,
+         null,
+         true
+      ],
+      [
+         "TO",
+         [
+            11,
+            "0009667261676d656e7433"
+         ],
+         true
+      ],
+      [
+         "TF",
+         [
+            9,
+            "fragment4"
+         ],
+         0,
+         false,
+         0,
+         null,
+         null,
+         null,
+         true
+      ],
+      [
+         "TF",
+         [
+            9,
+            "pongme 2!"
+         ],
+         9,
+         true,
+         0,
+         null,
+         null,
+         null,
+         true
+      ],
+      [
+         "TF",
+         [
+            9,
+            "fragment5"
+         ],
+         0,
+         true,
+         0,
+         null,
+         null,
+         null,
+         true
+      ],
+      [
+         "TI",
+         1
+      ],
+      [
+         "TO",
+         [
+            11,
+            "0009667261676d656e7434"
+         ],
+         true
+      ],
+      [
+         "TO",
+         [
+            11,
+            "8909706f6e676d65203221"
+         ],
+         true
+      ],
+      [
+         "TO",
+         [
+            11,
+            "8009667261676d656e7435"
+         ],
+         true
+      ],
+      [
+         "RO",
+         [
+            33,
+            "8a9b4737a8322145c9552a52c6467451da53205acd5c3303d85d2950c557670589"
+         ]
+      ],
+      [
+         "RF",
+         [
+            27,
+            "fragment3fragment4pongme 2!"
+         ],
+         10,
+         true,
+         0,
+         true,
+         "4737a832"
+      ],
+      [
+         "RO",
+         [
+            15,
+            "81895b039d783d71fc1f3666f30c6e"
+         ]
+      ],
+      [
+         "RF",
+         [
+            9,
+            "fragment5"
+         ],
+         1,
+         true,
+         0,
+         true,
+         "5b039d78"
+      ],
+      [
+         "TIE"
+      ],
+      [
+         "TF",
+         [
+            0,
+            ""
+         ],
+         8,
+         true,
+         0,
+         null,
+         null,
+         null,
+         false
+      ],
+      [
+         "TO",
+         [
+            2,
+            "8800"
+         ],
+         false
+      ],
+      [
+         "RO",
+         [
+            6,
+            "8880aaa7e092"
+         ]
+      ],
+      [
+         "RF",
+         [
+            0,
+            ""
+         ],
+         8,
+         true,
+         0,
+         true,
+         "aaa7e092"
+      ]
+   ]
+}

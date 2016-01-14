@@ -1,0 +1,175 @@
+{
+   "agent": "Dart",
+   "behavior": "OK",
+   "behaviorClose": "OK",
+   "case": 360,
+   "closedByMe": true,
+   "createStats": true,
+   "createWirelog": true,
+   "description": "Send 1000 compressed messages each of payload size 16, auto-fragment to 0 octets. Use default permessage-deflate offer.",
+   "droppedByMe": true,
+   "duration": 232,
+   "expectation": "Receive echo'ed messages (with payload as sent). Timeout case after 60 secs.",
+   "expected": {},
+   "expectedClose": {
+      "closeCode": [
+         1000
+      ],
+      "closedByMe": true,
+      "requireClean": true
+   },
+   "failedByMe": false,
+   "httpRequest": "GET /runCase?case=360&agent=Dart HTTP/1.1\r\nuser-agent: Dart/1.14 (dart:io)\r\nconnection: Upgrade\r\ncache-control: no-cache\r\naccept-encoding: gzip\r\ncontent-length: 0\r\nsec-websocket-version: 13\r\nhost: localhost:9001\r\nsec-websocket-extensions: permessage-deflate; client_max_window_bits\r\nsec-websocket-key: T97Ptvwy2G886VvSDKtpGg==\r\nupgrade: websocket\r\n\r\n",
+   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nServer: AutobahnTestSuite/0.7.4-0.10.9\r\nX-Powered-By: AutobahnPython/0.10.9\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nSec-WebSocket-Accept: SoiCnez6uY46nNGQ1jqk0uPG1yI=\r\nSec-WebSocket-Extensions: permessage-deflate\r\n\r\n",
+   "id": "12.4.1",
+   "isServer": true,
+   "localCloseCode": 1000,
+   "localCloseReason": null,
+   "received": [],
+   "remoteCloseCode": 1000,
+   "remoteCloseReason": null,
+   "reportCompressionRatio": true,
+   "reportTime": true,
+   "result": "Ok, received all echo'ed messages in time.",
+   "resultClose": "Connection was properly closed",
+   "rxFrameStats": {
+      "1": 1000,
+      "8": 1
+   },
+   "rxOctetStats": {
+      "8": 1,
+      "10": 452,
+      "11": 141,
+      "12": 30,
+      "13": 83,
+      "14": 48,
+      "15": 55,
+      "16": 40,
+      "17": 24,
+      "18": 22,
+      "19": 28,
+      "20": 20,
+      "21": 15,
+      "22": 17,
+      "23": 12,
+      "24": 13,
+      "350": 1
+   },
+   "started": "2016-01-14T16:46:21.015Z",
+   "trafficStats": {
+      "incomingCompressionRatio": 0.41625,
+      "incomingOctetsAppLevel": 16000,
+      "incomingOctetsWebSocketLevel": 6660,
+      "incomingOctetsWireLevel": 12660,
+      "incomingWebSocketFrames": 1000,
+      "incomingWebSocketMessages": 1000,
+      "incomingWebSocketOverhead": 0.9009009009009009,
+      "outgoingCompressionRatio": 0.41625,
+      "outgoingOctetsAppLevel": 16000,
+      "outgoingOctetsWebSocketLevel": 6660,
+      "outgoingOctetsWireLevel": 8660,
+      "outgoingWebSocketFrames": 1000,
+      "outgoingWebSocketMessages": 1000,
+      "outgoingWebSocketOverhead": 0.3003003003003003,
+      "preopenIncomingOctetsWireLevel": 350,
+      "preopenOutgoingOctetsWireLevel": 252
+   },
+   "txFrameStats": {
+      "1": 1000,
+      "8": 1
+   },
+   "txOctetStats": {
+      "4": 1,
+      "6": 452,
+      "7": 141,
+      "8": 30,
+      "9": 83,
+      "10": 48,
+      "11": 55,
+      "12": 40,
+      "13": 24,
+      "14": 22,
+      "15": 28,
+      "16": 20,
+      "17": 15,
+      "18": 17,
+      "19": 12,
+      "20": 13,
+      "252": 1
+   },
+   "wasClean": true,
+   "wasCloseHandshakeTimeout": false,
+   "wasNotCleanReason": null,
+   "wasOpenHandshakeTimeout": false,
+   "wasServerConnectionDropTimeout": false,
+   "wirelog": [
+      [
+         "RO",
+         [
+            350,
+            "474554202f72756e436173653f636173653d333630266167656e743d4461727420485454502f312e310d0a757365722d6167656e743a20446172742f312e3134 ..."
+         ]
+      ],
+      [
+         "TO",
+         [
+            252,
+            "485454502f312e312031303120537769746368696e672050726f746f636f6c730d0a5365727665723a204175746f6261686e5465737453756974652f302e372e ..."
+         ],
+         false
+      ],
+      [
+         "WLM",
+         false
+      ],
+      [
+         "TI",
+         60
+      ],
+      [
+         "WLM",
+         true
+      ],
+      [
+         "TF",
+         [
+            2,
+            "0x03e8"
+         ],
+         8,
+         true,
+         0,
+         null,
+         null,
+         null,
+         false
+      ],
+      [
+         "TO",
+         [
+            4,
+            "880203e8"
+         ],
+         false
+      ],
+      [
+         "RO",
+         [
+            8,
+            "888229a4e1e32a4c"
+         ]
+      ],
+      [
+         "RF",
+         [
+            2,
+            "0x03e8"
+         ],
+         8,
+         true,
+         0,
+         true,
+         "29a4e1e3"
+      ]
+   ]
+}
