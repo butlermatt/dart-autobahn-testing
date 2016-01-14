@@ -1,0 +1,5 @@
+name: wsserver
+description: Simple Websocket server
+version: 0.0.1
+dependencies:
+  logging: any
